@@ -23,17 +23,17 @@ var taskFixedFeedbackInterleaved = {
     taskSettings:{
       taskName: 'LearningTask',
 
-      sFeedback:1,
-      sVals:0,
-      sFreeChoice:0,
-      sButtonChoice: 1,
+      sFeedback:1, // display feedback (0-NO, 1 - YES)
+      sVals:0, // display Probability/Reward before Choice
+      sFreeChoice:0, // is the Feedback screen self-paced (0-NO, 1 - YES)
+      sButtonChoice: 1, // Choose option via buttons (1) or by clicking directly on the image
 
       maxTrials: 112,//112,
-      blockTrials: 1,
+      blockTrials: 1, // how many trials there are in a block (1 = no blocks)
 
-      fdbMS:2500,
-      borderMS:500,
-      valsMS:0,
+      fdbMS:2500, // Duration of feedback, fdbMS - borderMS = time the feedback was displayed
+      borderMS:500, // for how long was the response highligted
+      valsMS:0, // for how long participants saw the option values before they could make a choice
     },
 
     results: {
