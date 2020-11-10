@@ -5,7 +5,7 @@ import {sendToDB} from "../../general/dExperimentSendToDB.js";
 import {orderFunc} from "../../general/order.js";
 import {shuffle,getLastValue} from "../../general/dRandomFunctions.js";
 
-
+// use the setting from the 1st task, so all tasks have the same symbol/value associations
 var ss = new StimuliSettings(
     { sRandom:1,
 
@@ -25,17 +25,17 @@ var taskRandomFeedback = {
     taskSettings:{
       taskName: 'Preference',
 
-      sFeedback:0,
-      sVals:0,
-      sFreeChoice:0,
-      sButtonChoice: 1,
+      sFeedback:0, // display feedback (0-NO, 1 - YES)
+      sVals:0, // display Probability and Reward before Choice screen
+      sFreeChoice:0, // is the Feedback screen self-paced (0-NO, 1 - YES)
+      sButtonChoice: 1, // Choose option via buttons (1) or by clicking directly on the image
 
       maxTrials: 28,//8,
-      blockTrials: 1,
+      blockTrials: 1, // how many trials there are in a block (1 = no blocks)
 
-      fdbMS:1000,
-      borderMS:1000,//10,
-      valsMS:0
+      fdbMS:1000, // Duration of feedback, fdbMS - borderMS = time the feedback was displayed
+      borderMS:1000,//10, // for how long was the response highligted
+      valsMS:0 // for how long participants saw the option values before they could make a choice
     },
 
     results: {
